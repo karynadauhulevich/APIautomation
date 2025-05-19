@@ -37,7 +37,7 @@ describe ('USER SIGN UP',() => {
         })
     describe('POSITIVE TESTING with .then', ()=>{
         it ("should sign up a new user", async()=>{
-            const res = await signUp(user)
+                signUp(user)
                 .then((res)=>{
                     expect(res.status).toBe(201)
                     expect(res.body.data.user.name).toEqual(user.name)

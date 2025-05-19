@@ -40,7 +40,7 @@ export function signUp(user:User):Promise <any> {
     })
 }
 
-export function signUp2(user:User):Promise <any> {
+export function signUp2(user:User){
     return request.post('/users/signup').send(user)
         .expect(201)
 }
@@ -55,7 +55,7 @@ export function login(user:User):Promise <any> {
     })
 }
 
-export function login2(user:User): Promise<any> {
+export function login2(user:User){
     return request.post('/users/login2').send(user).expect(200)
 }
 
@@ -68,7 +68,7 @@ export function deleteFunction (cookie:string):Promise <any> {
             })
     })
 }
-    export function deleteFunction2(cookie:string):Promise <any> {
+    export function deleteFunction2(cookie:string){
         return request.delete("/users/deleteMe").set('Cookie',cookie).expect(200)
 
 }
