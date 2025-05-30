@@ -17,3 +17,11 @@ export async function deleteUserById(userId: ObjectId, db: Db) {
 export function findUserMngID (userId: ObjectId, db?: Db){
     return db.collection("users").findOne({ userId });
 }
+
+export function findTourName(name:string, db: Db){
+    return db.collection("tours").findOne({name:name});
+}
+
+export function deleteTour(tourId:ObjectId, db: Db){
+    return db.collection("tours").deleteOne({ _id:tourId});
+}
